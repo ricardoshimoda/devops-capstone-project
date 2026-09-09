@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -83,7 +84,7 @@ def list_accounts():
 def get_accounts(account_id):
     """
     Reads an Account
-    This endpoint will search for an Account with the specified id 
+    This endpoint will search for an Account with the specified id
     and return its data in JSON and 200_OK or
     404 if it couldn't find the respective account
     """
@@ -102,7 +103,7 @@ def get_accounts(account_id):
 def update_accounts(account_id):
     """
     Updates an Account
-    This endpoint will search for an Account with the specified id 
+    This endpoint will search for an Account with the specified id
     and update its data using what has been passed in the request
     """
     app.logger.info("Request to update an Account with id: %s", account_id)
@@ -124,7 +125,7 @@ def update_accounts(account_id):
 def delete_accounts(account_id):
     """
     Deletes an Account
-    This endpoint will search for an Account with the specified id 
+    This endpoint will search for an Account with the specified id
     and, upon finding it, will delete it
     if the account can't be found then it's just ignored
     """
