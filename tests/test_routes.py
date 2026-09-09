@@ -195,7 +195,7 @@ class TestAccountService(TestCase):
         self.assertEqual(new_account["phone_number"], account.phone_number)
         self.assertEqual(f"{account}", f"<Account {account.name} id=[{account.id}]>")
 
-    def test_update_account_not_found(self): 
+    def test_update_account_not_found(self):
         """It should not Update an account that is not found"""
         account = self._create_accounts(1)[0]
         account.name = "Test Name"
