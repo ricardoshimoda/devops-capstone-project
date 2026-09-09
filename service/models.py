@@ -105,7 +105,7 @@ class Account(db.Model, PersistentBase):
             "email": self.email,
             "address": self.address,
             "phone_number": self.phone_number,
-            "date_joined": self.date_joined.isoformat()
+            "date_joined": self.date_joined.isoformat() if self.date_joined else None
         }
 
     def deserialize(self, data):
