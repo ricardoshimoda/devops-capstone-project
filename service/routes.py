@@ -129,7 +129,6 @@ def delete_accounts(account_id):
     if the account can't be found then it's just ignored
     """
     app.logger.info("Request to delete an Account with id: %s", account_id)
-    check_content_type("application/json")
     account = Account.find(account_id)
     if account:
         account.delete()
