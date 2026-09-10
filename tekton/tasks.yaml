@@ -74,6 +74,9 @@ spec:
         - name: DATABASE_URI
           value: $(params.database_uri)
       workingDir: $(workspaces.source.path)
+      securityContext:
+        runAsNonRoot: false
+        runAsUser: 0
       script: |
         #!/bin/bash
         set -e
